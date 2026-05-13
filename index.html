@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#0b0b0c">
+    <title>cntrll — session drummer · live, studio, midi</title>
+    <meta name="description" content="cntrll — session drummer. Live performance, studio recording, MIDI & notation.">
+
+    <!-- fonts: Space Grotesk (display), Inter (body), JetBrains Mono (utility) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- =====================================================================
+         header / nav
+         ===================================================================== -->
+    <header class="site-header">
+        <a href="index.html" class="brand" aria-label="cntrll dot — home">cntrll<span class="dot">.</span></a>
+
+        <!-- desktop nav -->
+        <nav class="nav-primary" aria-label="Primary">
+            <ul>
+                <li><a href="index.html" aria-current="page">Index</a></li>
+                <li><a href="live.html">Live</a></li>
+                <li><a href="studio.html">Studio</a></li>
+                <li><a href="midi.html">MIDI</a></li>
+                <li><a href="about.html">About</a></li>
+            </ul>
+        </nav>
+
+        <!-- mobile toggle -->
+        <button class="nav-toggle"
+                aria-label="Open menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <!-- mobile drawer -->
+    <nav id="mobile-menu" class="nav-mobile" data-open="false" aria-label="Mobile">
+        <ul>
+            <li><a href="index.html">index</a></li>
+            <li><a href="live.html">live performance</a></li>
+            <li><a href="studio.html">studio recording</a></li>
+            <li><a href="midi.html">midi &amp; notation</a></li>
+            <li><a href="about.html">about</a></li>
+        </ul>
+        <div class="nav-footer">
+            <p>booking — <a href="mailto:cntrll@spacebar-berlin.com">cntrll@spacebar-berlin.com</a></p>
+        </div>
+    </nav>
+
+
+    <main id="main">
+
+        <!-- =================================================================
+             hero
+             ================================================================= -->
+        <section class="hero" aria-label="Intro">
+            <div class="hero__media" aria-hidden="true">
+                <!-- replace src with your hero reel (.mp4). poster falls back to placeholder. -->
+                <video autoplay muted loop playsinline preload="metadata"
+                       poster="">
+                    <source src="media/hero.mp4" type="video/mp4">
+                    <!-- fallback if <source> can't load -->
+                </video>
+                <div class="placeholder" style="position:absolute; inset:0; z-index:-1;">
+                    [ hero reel placeholder — media/hero.mp4 ]
+                </div>
+            </div>
+            <div class="hero__scrim" aria-hidden="true"></div>
+
+            <div class="hero__content">
+                <p class="eyebrow">session drummer · based in berlin</p>
+                <h1 class="hero__title">cntrll<span class="slash">.</span></h1>
+                <div class="hero__meta">
+                    <span><strong>live</strong> — tour &amp; session</span>
+                    <span><strong>studio</strong> — remote &amp; local</span>
+                    <span><strong>midi</strong> — programming &amp; notation</span>
+                </div>
+            </div>
+
+            <span class="hero__scroll" aria-hidden="true">scroll ↓</span>
+        </section>
+
+
+        <!-- =================================================================
+             intro
+             ================================================================= -->
+        <section class="section">
+            <div class="container intro">
+                <h2 class="intro__lead">
+                    a drummer who works <em>where the song needs them</em> — on stage, on tape, on a grid.
+                </h2>
+                <div class="intro__body">
+                    <p class="lead muted">
+                        Touring pocket, studio nuance, and tight programming under one name.
+                        Years of experience across genres, venues and studios — pop, metal, punk, folk, and the in-between —
+                        delivered with the same dry, deliberate hand.
+                    </p>
+                    <p class="mono" style="font-size: var(--t-xs); text-transform:uppercase; letter-spacing:0.16em; color: var(--c-fg-muted);">
+                        availability — 2026 · book via <a href="mailto:cntrll@spacebar-berlin.com" style="color:var(--c-fg); text-decoration:underline; text-underline-offset:4px;">cntrll@spacebar-berlin.com</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =================================================================
+             services — full-bleed scroll-pinned "chapters"
+             each chapter is 2× viewport tall; a sticky stage holds the text
+             while a black veil fades out on scroll to reveal the media.
+             ================================================================= -->
+        <section class="section" id="services" aria-labelledby="services-title">
+            <div class="container">
+                <div class="services__intro">
+                    <p class="eyebrow">services / 03</p>
+                    <h2 id="services-title">three rooms.<br>one player.</h2>
+                </div>
+            </div>
+
+            <!-- ---- chapter 01 — live ---- -->
+            <article class="chapter">
+                <div class="chapter__stage">
+                    <div class="chapter__media">
+                        <img src="media/live-hero.jpg" alt="" onerror="this.remove();">
+                        <div class="placeholder">[ live still — media/live-hero.jpg ]</div>
+                    </div>
+                    <div class="chapter__inner container">
+                        <header class="chapter__head">
+                            <p class="chapter__num">01 / live</p>
+                            <h3 class="chapter__title">live<br>performance<span class="accent">.</span></h3>
+                        </header>
+                        <div class="chapter__foot">
+                            <p class="chapter__body">
+                                Touring drums and one-off dates. Click-tracked, in-ear, festival-ready.
+                                Comfortable as the band, comfortable as the hired gun.
+                            </p>
+                            <a class="chapter__cta" href="live.html">
+                                <span>enter</span>
+                                <span class="arrow" aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---- chapter 02 — studio ---- -->
+            <article class="chapter">
+                <div class="chapter__stage">
+                    <div class="chapter__media">
+                        <img src="media/studio-hero.jpg" alt="" onerror="this.remove();">
+                        <div class="placeholder">[ studio still — media/studio-hero.jpg ]</div>
+                    </div>
+                    <div class="chapter__inner container">
+                        <header class="chapter__head">
+                            <p class="chapter__num">02 / studio</p>
+                            <h3 class="chapter__title">studio<br>recording<span class="accent">.</span></h3>
+                        </header>
+                        <div class="chapter__foot">
+                            <p class="chapter__body">
+                                Remote sessions from a treated room — 24-bit stems, fast turnaround,
+                                sympathetic to the producer's brief. Local dates on request.
+                            </p>
+                            <a class="chapter__cta" href="studio.html">
+                                <span>enter</span>
+                                <span class="arrow" aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ---- chapter 03 — midi ---- -->
+            <article class="chapter">
+                <div class="chapter__stage">
+                    <div class="chapter__media">
+                        <img src="media/midi-hero.jpg" alt="" onerror="this.remove();">
+                        <div class="placeholder">[ piano roll — media/midi-hero.jpg ]</div>
+                    </div>
+                    <div class="chapter__inner container">
+                        <header class="chapter__head">
+                            <p class="chapter__num">03 / midi</p>
+                            <h3 class="chapter__title">midi<br>&amp; notation<span class="accent">.</span></h3>
+                        </header>
+                        <div class="chapter__foot">
+                            <p class="chapter__body">
+                                Programmed drums, hybrid kits, and human-feel quantisation.
+                                Full transcriptions, charts, and DAW-ready MIDI stems.
+                            </p>
+                            <a class="chapter__cta" href="midi.html">
+                                <span>enter</span>
+                                <span class="arrow" aria-hidden="true">→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================================
+         footer
+         ===================================================================== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div>
+                    <h4>booking</h4>
+                    <ul>
+                        <li><a href="mailto:cntrll@spacebar-berlin.com">cntrll@spacebar-berlin.com</a></li>
+                        <li><a href="#">+49 1515 889 2318</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>elsewhere</h4>
+                    <ul>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">YouTube</a></li>
+                        <li><a href="#">Telegram</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>navigate</h4>
+                    <ul>
+                        <li><a href="live.html">Live</a></li>
+                        <li><a href="studio.html">Studio</a></li>
+                        <li><a href="midi.html">MIDI</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="colophon">
+                <span>© cntrll · 2026</span>
+                <span>berlin / worldwide</span>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- =====================================================================
+         minimal vanilla js
+         (1) mobile menu toggle
+         (2) chapter scroll-reveal — updates --reveal (0..1) on each chapter
+             as it pins to the viewport, fading the black overlay out
+         ===================================================================== -->
+    <script>
+        // (1) mobile menu
+        (function () {
+            const toggle = document.querySelector('.nav-toggle');
+            const drawer = document.getElementById('mobile-menu');
+            if (!toggle || !drawer) return;
+
+            const setOpen = (open) => {
+                toggle.setAttribute('aria-expanded', String(open));
+                toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+                drawer.setAttribute('data-open', String(open));
+                document.body.style.overflow = open ? 'hidden' : '';
+            };
+
+            toggle.addEventListener('click', () => {
+                const open = toggle.getAttribute('aria-expanded') === 'true';
+                setOpen(!open);
+            });
+
+            drawer.querySelectorAll('a').forEach(a =>
+                a.addEventListener('click', () => setOpen(false))
+            );
+
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+                    setOpen(false);
+                }
+            });
+        })();
+
+        // (2) chapter scroll-reveal
+        //     image translates from 100% (below stage) to 0% (in view)
+        //     linear 1:1 with scroll — direct "scrolling in" feel
+        (function () {
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+            const chapters = document.querySelectorAll('.chapter');
+            if (!chapters.length) return;
+
+            let ticking = false;
+            const update = () => {
+                const vh = window.innerHeight;
+                chapters.forEach((ch) => {
+                    const rect = ch.getBoundingClientRect();
+                    const total = ch.offsetHeight - vh;
+                    if (total <= 0) return;
+                    // linear progress 0..1 — image translates at the same rate as scroll
+                    const raw = Math.max(0, Math.min(1, -rect.top / total));
+                    ch.style.setProperty('--reveal', raw.toFixed(4));
+                });
+                ticking = false;
+            };
+
+            const onScroll = () => {
+                if (!ticking) {
+                    requestAnimationFrame(update);
+                    ticking = true;
+                }
+            };
+
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll);
+            update();
+        })();
+    </script>
+</body>
+</html>
